@@ -22,7 +22,7 @@ body {
 }
 .title{
   text-align:center;
-  font-size:125px;
+  font-size:175px;
   color:orange;
   text-shadow:2px 5px hotpink ;
 }
@@ -36,9 +36,10 @@ body {
 }
 .buttonz{
   background-color:orange;
+  font-size:30px;
   border-radius:25px;
   color:darkorchid;
-  margin:5px;
+  margin:10px;
 }
 .buttonz:hover{
   background-color:darkorchid;
@@ -50,14 +51,14 @@ body {
 }
 .nav-bar-title{
   color:orange;
-  font-size:50px;
+  font-size:100px;
   margin-right:10px;
   text-shadow:2px 2px hotpink ;
 }
 .joke-font{
   color:indigo;
   font-weight:350;
-  font-size:30px;
+  font-size:50px;
 }
 .Navbar{
 
