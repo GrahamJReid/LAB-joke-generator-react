@@ -1,9 +1,8 @@
 import axios from 'axios';
-
-const endpoint = 'https://v2.jokeapi.dev/joke/Programming?safe-mode&type=twopart';
+import { endpointValue } from '../components/endpointGenerator';
 
 const getJoke = async () => {
-  const jokeCall = await axios.get(endpoint);
+  const jokeCall = await axios.get(endpointValue);
   return jokeCall.data;
 };
 
