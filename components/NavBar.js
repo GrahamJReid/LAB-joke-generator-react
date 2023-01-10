@@ -10,7 +10,7 @@ export default function NavBar() {
     <Navbar collapseOnSelect expand="lg" className="Navbarz">
       <Container>
         <p className="nav-bar-title">Got Jokes?</p>
-        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Programming?safe-mode&type=twopart'))}>Programming Jokes</button>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Programming?{safemode}&type=twopart'))}>Programming Jokes</button>
         <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Christmas?safe-mode&type=twopart'))}>Christmas Jokes</button>
         <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Pun?safe-mode&type=twopart'))}>Pun Jokes</button>
         <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Spooky?safe-mode&type=twopart'))}>Spooky Jokes</button>
