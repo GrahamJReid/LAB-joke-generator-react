@@ -18,10 +18,9 @@ function Home() {
   };
 
   const handleClick = () => {
-    setValue('');
-    setDeliveryValue('');
     getJoke().then((jokedata) => {
       setValue(jokedata.setup);
+      setDeliveryValue('');
       apiDelivery = jokedata.delivery;
       setButton('get punchline');
     });
@@ -37,7 +36,7 @@ function Home() {
         margin: '0 auto',
       }}
     >
-      <h1>Welcome Home!</h1>
+      <h1>JOKEJOKEJOKE!</h1>
       <button
         type="button"
         onClick={() => {
@@ -45,12 +44,14 @@ function Home() {
             handleClick();
           } else if (btnText === 'get punchline') {
             handleDelivery();
-          } else if (btnText === 'get another joke') { handleClick(); }
+          } else if (btnText === 'get another joke') {
+            handleClick();
+          }
         }}
       >{btnText}
       </button>
       <div> setup: { value }</div>
-      <div> punchline:{ deliveryValue }</div>
+      <div> punchline: { deliveryValue }</div>
     </div>
   );
 }
