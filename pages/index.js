@@ -46,8 +46,8 @@ function Home() {
           >{btnText}
           </button>
           <div className="joke-font">
-            <div> setup: { value }</div>
-            <div> punchline: { deliveryValue }</div>
+            <div>  { value }</div>
+            <div>  { deliveryValue }</div>
           </div>
         </div>
       </div>
