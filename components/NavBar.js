@@ -1,17 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Link from 'next/link';
 import {
   Navbar, Container, Nav,
 } from 'react-bootstrap';
+import { endpointGenerator } from './endpointGenerator';
 
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" className="Navbarz">
       <Container>
-        <Link passHref href="/">
-          <Navbar.Brand>Got Jokes!</Navbar.Brand>
-        </Link>
+        <p className="nav-bar-title">Got Jokes?</p>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Programming?safe-mode&type=twopart'))}>Programming Jokes</button>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Christmas?safe-mode&type=twopart'))}>Christmas Jokes</button>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Pun?safe-mode&type=twopart'))}>Pun Jokes</button>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Spooky?safe-mode&type=twopart'))}>Spooky Jokes</button>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Misc?safe-mode&type=twopart'))}>Misc Jokes</button>
+        <button className="buttonz" type="button" onClick={() => (endpointGenerator('https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart'))}>Any Jokes</button>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

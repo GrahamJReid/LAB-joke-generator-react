@@ -14,7 +14,7 @@ function Home() {
 
   const handleDelivery = () => {
     setDeliveryValue(apiDelivery);
-    setbtnText('get another joke');
+    setbtnText('Get Another Joke');
   };
 
   const handleClick = () => {
@@ -22,36 +22,35 @@ function Home() {
       setValue(jokedata.setup);
       setDeliveryValue('');
       apiDelivery = jokedata.delivery;
-      setButton('get punchline');
+      setButton('Get Punchline');
     });
   };
 
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>JOKEJOKEJOKE!</h1>
-      <button
-        type="button"
-        onClick={() => {
-          if (btnText === 'Get a Joke') {
-            handleClick();
-          } else if (btnText === 'get punchline') {
-            handleDelivery();
-          } else if (btnText === 'get another joke') {
-            handleClick();
-          }
-        }}
-      >{btnText}
-      </button>
-      <div> setup: { value }</div>
-      <div> punchline: { deliveryValue }</div>
+    <div>
+      <div className="content-container">
+        <h1 className="title">JOKEJOKEJOKE!</h1>
+        <div className="content">
+          <button
+            className="buttonz"
+            type="button"
+            onClick={() => {
+              if (btnText === 'Get a Joke') {
+                handleClick();
+              } else if (btnText === 'Get Punchline') {
+                handleDelivery();
+              } else if (btnText === 'Get Another Joke') {
+                handleClick();
+              }
+            }}
+          >{btnText}
+          </button>
+          <div className="joke-font">
+            <div> setup: { value }</div>
+            <div> punchline: { deliveryValue }</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
